@@ -1,0 +1,2 @@
+-- In ox_inventory, usable items are handled directly in data/items.lua
+-- No server-side registration needed for ESX compatibility

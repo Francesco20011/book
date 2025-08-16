@@ -1,0 +1,138 @@
+/* STILE ORIGINALE MANTENUTO */
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+ /* Pagine dure (copertine) - PIÙ GRANDI */
+.hard-page {
+    position: relative;
+    z-index: 10;
+}
+
+/* NUOVA REGOLA PER INGRANDIRE LE IMMAGINI DELLE COPERTINE */
+.hard-page img {
+    transform: scale(1.3); /* Ingrandimento del 30% */
+    transform-origin: center;
+}
+
+.hard-page .text-overlay {
+    display: none;
+}
+
+/* Stile per le pagine del libro - ZERO SPAZI */
+.turn-page {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Assicura che ogni pagina rispetti le dimensioni esatte */
+.turn-page {
+    width: 512px;   /* Metà della larghezza totale per pagina singola */
+    height: 768px;  /* Altezza completa */
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    display: block;
+}
+
+/* Forza le immagini a rispettare le dimensioni delle pagine */
+.page-image {
+    display: block;
+    width: 512px !important;   /* Larghezza pagina singola */
+    height: 768px !important;  /* Altezza completa */
+    object-fit: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Overlay per il testo ottimizzato e responsive */
+.text-overlay {
+    position: absolute;
+    top: 8%;           /* Margine superiore percentuale */
+    left: 8%;          /* Margine sinistro percentuale */
+    right: 8%;         /* Margine destro percentuale */
+    bottom: 8%;        /* Margine inferiore percentuale */
+    width: 84%;        /* Larghezza adattiva */
+    height: 84%;       /* Altezza adattiva */
+    color: #1a1a1a;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 16px;   /* Font più grande per essere visibile */
+    line-height: 1.5;
+    pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
+    text-align: justify;
+    padding: 15px;
+    background: rgba(255,255,255,0.2); /* Sfondo più visibile */
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: visible;  /* Cambiato da hidden a visible */
+    word-wrap: break-word;
+    z-index: 100;      /* Z-index alto per stare sopra */
+    display: block;    /* Assicura che sia visibile */
+}
+
+/* Stile per i titoli responsive */
+.text-overlay h3 {
+    color: #2C1810 !important;    /* Colore più scuro */
+    margin-bottom: 15px;
+    font-size: 20px !important;   /* Titolo più grande */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 3px 3px 6px rgba(255,255,255,0.9);
+    line-height: 1.3;
+    display: block !important;
+}
+
+/* Stile per il contenuto responsive */
+.text-overlay p {
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 16px !important;    /* Font più grande per essere visibile */
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: #1a1a1a !important;    /* Colore scuro per contrasto */
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
+    display: block !important;
+}
+
+/* Pagine dure (copertine) - PIÙ GRANDI */
+.hard-page {
+    position: relative;
+    transform: scale(1.3); /* 30% più grandi */
+    transform-origin: center;
+    z-index: 10;
+}
+
+.hard-page .text-overlay {
+    display: none !important;
+}
+
+/* NUOVI STILI PER IL CENTRAMENTO */
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
